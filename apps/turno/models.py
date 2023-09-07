@@ -6,7 +6,7 @@ from django.db import models
 class Persona(models.Model):
     nombre = models.CharField(max_length=200)
     apellido = models.CharField(max_length=200)
-    dni = models.IntegerField(max_length=8)
+    dni = models.IntegerField()
     email = models.EmailField()
 
 
@@ -38,6 +38,7 @@ class Horario(models.Model):
 
 class Turno(models.Model):
     persona = models.ForeignKey(Persona, on_delete=models.CASCADE)
+    horario = models.ForeignKey(Horario, on_delete=models.CASCADE)
     hora = models.TimeField()
     fecha = models.DateField()
 

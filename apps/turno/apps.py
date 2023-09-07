@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class TurneroConfig(AppConfig):
+class TurnoConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'turnero'
+    name = 'apps.turno'

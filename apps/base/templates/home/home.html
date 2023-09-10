@@ -2,56 +2,49 @@
 {% load static %}
 
  {% block content %}
- <div class="box">
-    <article class="media">
-      <div class="media-left">
-        <figure class="image is-150x150">
-          <img src="{% static 'img/hospital.jpg' %}" alt="Image">
-        </figure>
+ <div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+          <p class="title">Vertical...</p>
+          <p class="subtitle">Top tile</p>
+        </article>
+        <article class="tile is-child notification is-warning">
+          <p class="title">...tiles</p>
+          <p class="subtitle">Bottom tile</p>
+        </article>
       </div>
-      <div class="media-content">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">Middle tile</p>
+          <p class="subtitle">With an image</p>
+          <figure class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/640x480.png">
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title">Wide tile</p>
+        <p class="subtitle">Aligned with the right tile</p>
         <div class="content">
-          <p>
-            <strong>HOSPITAL SAN JUAN</strong> 
-            <br>
-           
-            ¿De dónde viene?
-        Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. 
-        Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, 
-        haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, 
-        un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras 
-        de la lengua del latín, "consecteur", en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín,
-        descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de "de Finnibus Bonorum et Malorum" 
-        (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. 
-        Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. 
-        La primera linea del Lorem Ipsum, "Lorem ipsum dolor sit amet..", viene de una linea en la sección 1.10.32
-
-        El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. 
-        Las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también reproducidas en su forma original exacta, 
-        acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.
-
-          </p>
+          <!-- Content -->
         </div>
-        <nav class="level is-mobile">
-          <div class="level-left">
-            <a class="level-item" aria-label="reply">
-              <span class="icon is-small">
-                <i class="fas fa-reply" aria-hidden="true"></i>
-              </span>
-            </a>
-            <a class="level-item" aria-label="retweet">
-              <span class="icon is-small">
-                <i class="fas fa-retweet" aria-hidden="true"></i>
-              </span>
-            </a>
-            <a class="level-item" aria-label="like">
-              <span class="icon is-small">
-                <i class="fas fa-heart" aria-hidden="true"></i>
-              </span>
-            </a>
-          </div>
-        </nav>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification is-success">
+      <div class="content">
+        <p class="title">Tall tile</p>
+        <p class="subtitle">With even more content</p>
+        <div class="content">
+          <!-- Content -->
+        </div>
       </div>
     </article>
   </div>
+</div>
 {% endblock %}
